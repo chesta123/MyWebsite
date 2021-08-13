@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>MyWebsite</title>
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">mywebsite.in</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+
+    </ul>
+  </div>
+  <form action='/analyze' method='get'>
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+</nav>
+
+
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+  <strong>Welcome to my website</strong> You should focus on this website instead of studies
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+
+<div class="container">
+
+  <form action="/analyze"  method="post"> {% csrf_token %}
+
+
+
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Enter your text here and let my website do the magic</label>
+    <textarea class="form-control" name='text' id="exampleFormControlTextarea1" rows="9"></textarea>
+</div>
+
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="removepunc" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Remove punctuation</label>
+</div>
+
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="fullcaps" id="flexSwitchCheckDefault2">
+  <label class="form-check-label" for="flexSwitchCheckDefault2">UPPERCASE</label>
+</div>
+
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="newlineremover" id="flexSwitchCheckDefault3">
+  <label class="form-check-label" for="flexSwitchCheckDefault3">NEW LINE REMOVER</label>
+</div>
+
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="extraspaceremover" id="flexSwitchCheckDefault4">
+  <label class="form-check-label" for="flexSwitchCheckDefault4">EXTRA SPACE REMOVER</label>
+</div>
+
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="charcount" id="flexSwitchCheckDefault5">
+  <label class="form-check-label" for="flexSwitchCheckDefault5">COUNT CHARACTERS</label>
+</div>
+
+  <button type="submit" class="btn btn-danger">Analyze text</button>
+<!--    <button type='submit'> Analyze Text</button>-->
+
+  </form>
+</div>
+
+
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>-->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU-->
+
+  </body>
+</html>
+
+
+
+
